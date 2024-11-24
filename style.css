@@ -95,6 +95,10 @@ body{
     animation: fadeInSection1 1.5s ease-in-out forwards; 
 }
 
+#section1 {
+    background-image: url('./img/ScreenshotDrums.png');
+}
+
 #section2 {
     background-image: url('./img/javierproducerphoto.jpg'); /* Image 2 */
     text-align: center;
