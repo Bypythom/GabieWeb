@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+.navbar-brand img{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero h1, 
+.hero #her-text {
+    display: inline-block; /* Wrap background around text */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px; /* Rounded corners */
+    margin: 0.5rem 0; /* Space between lines */
+}
+
+.hero .btn {
+    padding: 0.75rem 1.5rem; /* Adjust button size */
+    font-size: 1rem;
+}
+  
+  /* Add the fade-in background via a pseudo-element */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./img/javierdrumphoto.jpg') center center/cover no-repeat;
+    opacity: 0; /* Start fully transparent */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    z-index: -1; /* Place it behind the hero content */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 600px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1.5s ease-in-out;
+  }
+ 
+  
+  /*--- End of Hero Section ---*/
+  /*--- Music Section ---*/
+/* Generic styling for full-background sections */
+.full-background-section {
+    height: 80vh; /* Full viewport height */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Section-specific backgrounds */
+#section1 {
+    text-align: center;
+    height: 80vh; /* Full viewport height */
+    position: relative;
+    background-color: black; /* Initially black background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out; /* Smooth transition for the background image */
+    animation: fadeInSection1 1.5s ease-in-out forwards; 
+}
+
+#section2 {
+    background-image: url('./img/javierproducerphoto.jpg'); /* Image 2 */
+    text-align: center;
+}
+
+/* Optional Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay h2 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+  .album-card img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .social-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  footer {
+    background: #333;
+    color: white;
+  }
